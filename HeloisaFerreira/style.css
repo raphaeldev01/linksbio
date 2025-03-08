@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    --cor1: #D4C2AD;
+    --cor2: #f4d1a7;
+    --cor3: #D9C6B0;
+    --cor4: #BA8E7A;
+    --cor5: #7D523B;
+    background-color: var(--cor5);
+}
+
+main {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.img {
+    background-image: url(./assets/image.jpeg);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid var(--cor2)
+}
+
+.title {
+    font-family: Poppins, sans-serif;
+    color: var(--cor2);
+    font-size: 28px;
+    margin: 0;
+}
+.desc {
+     margin: 0;
+     font-size: 14px;
+     font-family: sans-serif;
+     color: var(--cor1);
+}
+
+.links {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     margin: 30px;
+}
+
+.link {
+    border: 2px solid var(--cor3);
+    padding: 1rem 4rem;
+    width: 250px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--cor3);
+    border-radius: 40px;
+    font-family: "Playwrite IT Moderna", sans-serif;
+    transition: all .3s;
+}
+
+.link:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+    font-weight: 300;
+}
+
+.footer {
+    color: #ccc;
+    font-weight: 100;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+}
+
+.footer a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-weight: 300;
+}
