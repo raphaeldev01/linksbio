@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <main>
+        <h1 class="title">Monte seu proprio LinksBio</h1>
+        <div class="sections">
+            <section class="sec">
+                <h2 class="name">Links</h2>
+                <div class="links" id="Links">
+                    <!-- <div class="link">
+                        <input on ="" class="inptLink" type="text" placeholder="WhatsApp">
+                        <div class="inptBtn"><img src="https://img.icons8.com/?size=100&id=nerFBdXcYDve&format=png&color=3299df" alt=""></div>
+                    </div> -->
+                </div>
+                <button class="addLink" onclick="AddLink()">Adicionar Link</button>
+            </section>
+            <section class="sec">
+                <h2 class="name">Infos</h2>
+                
+                <div class="texts">
+                    <div class="inptText">
+                        <input id="name" oninput="ChangeName()" class="inptInpt" type="text" placeholder="Nome">
+                    </div>
+                    <div class="inptText">
+                        <input id="desc" oninput="ChangeDesc()" class="inptInpt" type="Desc" placeholder="Descrição">
+                    </div>
+                </div>
+                <h2 class="name" style="margin-top: 10px;">Cores</h2>
+                <div class="colors">
+                    <div class="corOpt">
+                        <label for="cor1">Cor 1</label>
+                        <div class="inptsCor">
+                            <input oninput="ChangeColorTxt(1)" class="inptCorText" id="corText1" type="text" placeholder="#000000">
+                            <input oninput="ChangeCorColor(1)" class="inptCorColor" id="corColor1" type="color" name="" id="">
+                        </div>
+                    </div>
+                    <div class="corOpt">
+                        <label for="cor1">Cor 2</label>
+                        <div class="inptsCor">
+                            <input oninput="ChangeColorTxt(2)" class="inptCorText" id="corText2" type="text" placeholder="#000000">
+                            <input oninput="ChangeCorColor(2)" class="inptCorColor" id="corColor2" type="color" name="" id="">
+                        </div>
+                    </div>
+                    <div class="corOpt">
+                        <label for="cor1">Cor 3</label>
+                        <div class="inptsCor">
+                            <input oninput="ChangeColorTxt(3)" class="inptCorText" id="corText3" type="text" placeholder="#000000">
+                            <input oninput="ChangeCorColor(3)" class="inptCorColor" id="corColor3" type="color" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <h1>Pré Visualizar</h1>
+        <section id="app" class="app">
+            <section class="perfil">
+                <div class="img"></div>
+                <h1 class="titleApp">Heloisa Ferreira</h1>
+                <p class="desc">Consultora de imóveis em Lisboa e região</p>
+            </section>
+            <section class="linksApp">
+                <a href="https://www.remax.pt/pt/agente/heloisa-ferreira/120992802" class="linkApp">Imoveis</a>
+                <a href="https://wa.me/351922208328" class="linkApp">Whatsapp</a>
+                <a href="https://www.instagram.com/heloisaferreira_erm?igsh=ZXJ3aHNza3Jwejd4&utm_source=qr" class="linkApp">Instagram</a>
+            </section>
+            <footer class="footer">Monte seu proprio <a href="https://wa.me/5516991345301?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20meu%20link%20personalizado%20com%20a%20LinksBio!!!">LinksBio</a></footer>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>
