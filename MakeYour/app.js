@@ -11,6 +11,8 @@ var cores = {
 }
 var version = 0 // 0 = free; 1 = pro; 2 = premium 
 
+
+
 var ChangeImage = () => {
     const elementImg = document.getElementById("inptFileLabel")
     const file = document.getElementById("imageInput").files[0];
@@ -98,8 +100,6 @@ var ChangeLinks = () => {
     UpdatePreview()
 }
 
-
-
 var ChangeColorTxt = (id) => {
     const elementTxt = document.getElementById("corText" + id)
     const elementColor = document.getElementById("corColor" + id)
@@ -142,6 +142,7 @@ var ChangeVersion = (v) => {
     const vrs0 = document.getElementById("vrs0")
     const vrs1 = document.getElementById("vrs1")
     const vrs2 = document.getElementById("vrs2")
+    const elementPriece = document.getElementById("priece")
 
     vrs0.classList.remove("active")
     vrs1.classList.remove("active")
@@ -149,9 +150,15 @@ var ChangeVersion = (v) => {
 
     version = v
 
-    if(v == 0 ) vrs0.classList.add("active")
-    if(v == 1 ) vrs1.classList.add("active")
-    if(v == 2 ) vrs2.classList.add("active")
+    if(v == 0 ) { 
+        elementPriece.innerHTML = "R$0,00 Mensal"
+        vrs0.classList.add("active") }
+    if(v == 1 ) { 
+        elementPriece.innerHTML = "R$3,00 Mensal"
+        vrs1.classList.add("active") }
+    if(v == 2 ) { 
+        elementPriece.innerHTML = "R$15,00 Mensal"
+        vrs2.classList.add("active") }
 
     UpdatePreview()
 }
@@ -174,6 +181,11 @@ var UpdatePreview = () => {
     })}
             </section>
             <footer class="footer ${version == 0 ? "free" : ""} ${version == 2 ? "premium" : ""}">Monte seu proprio <a href="https://wa.me/5516991345301?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20meu%20link%20personalizado%20com%20a%20LinksBio!!!">LinksBio</a> Gratis</footer>`
+}
+
+const HandleFinish = () => {
+    if(!image) return alert("Imagem não encontrada")
+    if(links.length == 0) return alert("Você não pode finalizar sem adicionar Links")
 }
 
 UpdatePreview()

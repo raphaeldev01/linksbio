@@ -52,22 +52,22 @@
                     <div class="corOpt">
                         <label for="cor1">Cor 1</label>
                         <div class="inptsCor">
-                            <input oninput="ChangeColorTxt(1)" class="inptCorText" id="corText1" type="text" placeholder="#000000">
-                            <input oninput="ChangeCorColor(1)" class="inptCorColor" id="corColor1" type="color" name="" id="">
+                            <input oninput="ChangeColorTxt(1)" class="inptCorText" id="corText1" type="text" maxlength="7" placeholder="#7D523B" >
+                            <input oninput="ChangeCorColor(1)" class="inptCorColor" id="corColor1" type="color" name="" value="#7D523B" id="">
                         </div>
                     </div>
                     <div class="corOpt">
                         <label for="cor1">Cor 2</label>
                         <div class="inptsCor">
-                            <input oninput="ChangeColorTxt(2)" class="inptCorText" id="corText2" type="text" placeholder="#000000">
-                            <input oninput="ChangeCorColor(2)" class="inptCorColor" id="corColor2" type="color" name="" id="">
+                            <input oninput="ChangeColorTxt(2)" class="inptCorText" id="corText2" type="text" maxlength="7" placeholder="#f4d1a7" >
+                            <input oninput="ChangeCorColor(2)" class="inptCorColor" id="corColor2" type="color" name="" value="#f4d1a7" id="">
                         </div>
                     </div>
                     <div class="corOpt">
                         <label for="cor1">Cor 3</label>
                         <div class="inptsCor">
-                            <input oninput="ChangeColorTxt(3)" class="inptCorText" id="corText3" type="text" placeholder="#000000">
-                            <input oninput="ChangeCorColor(3)" class="inptCorColor" id="corColor3" type="color" name="" id="">
+                            <input oninput="ChangeColorTxt(3)" class="inptCorText" id="corText3" type="text" maxlength="7" placeholder="#D9C6B0">
+                            <input oninput="ChangeCorColor(3)" class="inptCorColor" id="corColor3" value="#D9C6B0" type="color" name="" id="">
                         </div>
                     </div>
                 </div>
@@ -80,6 +80,7 @@
                 <div onclick="ChangeVersion(1)" id="vrs1" class="vrs">Pro</div>
                 <div onclick="ChangeVersion(2)" id="vrs2" class="vrs">Premium</div>
             </div>
+            <div id="priece">R$0,00 Mensal</div>
         </div>
         <section id="app" class="app">
             <section class="perfil">
@@ -94,7 +95,7 @@
             </section>
             <footer class="footer">Monte seu proprio <a href="https://wa.me/5516991345301?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20meu%20link%20personalizado%20com%20a%20LinksBio!!!">LinksBio</a></footer>
         </section>
-
+        <button onclick="HandleFinish()" class="btnActive">Criar Agora</button>
     </main>
 
     <script src="app.js"></script>

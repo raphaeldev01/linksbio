@@ -8,10 +8,10 @@
 }
 
 html {
-    background-color: #000;
+    background-color: var(--cor3);
     --cor1: #3299df;
     --cor2: #6b74cf;
-    --cor3: #1e2943;
+    --cor3: #0c1323;
 }
 
 /* .bg {
@@ -236,6 +236,18 @@ main {
     font-weight: 900;
 }
 
+.btnActive {
+    margin-bottom: 50px;
+    padding: 1rem 3rem;
+    border: 1px solid var(--cor1);
+    background: var(--cor1);
+    font-size: 18px;
+    color: #eee;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+
 /* ========================================== */
 /*                   APP                      */
 /* ========================================== */
@@ -246,7 +258,14 @@ main {
     width: 100%;
     max-width: 80%;
     margin: 30px auto;
-    
+    flex-direction: column;
+    align-items: center ;
+    gap: 15px;
+}
+
+#priece {
+    font-weight: bold;
+
 }
 
 .version {
