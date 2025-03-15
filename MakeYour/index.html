@@ -14,12 +14,21 @@
         <h1 class="title">Monte seu proprio LinksBio</h1>
         <div class="sections">
             <section class="sec">
+                <div class="makeUrl">
+                    <div>https://linksbio.netify.app/</div>
+                    <input type="text" class="inputLink">      
+                </div>
+            </section>
+            <section class="sec">
                 <h2 class="name">Links</h2>
                 <div class="links" id="Links">
-                    <!-- <div class="link">
-                        <input on ="" class="inptLink" type="text" placeholder="WhatsApp">
-                        <div class="inptBtn"><img src="https://img.icons8.com/?size=100&id=nerFBdXcYDve&format=png&color=3299df" alt=""></div>
-                    </div> -->
+                    <div class="link">
+                        <div class="nameInput">
+                            <input on ="" class="inptLink" type="text" placeholder="Nome">
+                            <div class="inptBtn"><img src="https://img.icons8.com/?size=100&id=nerFBdXcYDve&format=png&color=3299df" alt=""></div>
+                        </div>
+                        <input type="text" class="inptUrl" placeholder="url">
+                    </div>
                 </div>
                 <button class="addLink" onclick="AddLink()">Adicionar Link</button>
             </section>
@@ -27,6 +36,10 @@
                 <h2 class="name">Infos</h2>
                 
                 <div class="texts">
+                    <div class="inptText">
+                        <input onchange="ChangeImage()" class="inptFile" type="file" id="imageInput" accept="image/*">
+                        <label id="inptFileLabel" class="inptFileLabel" for="imageInput" class="file-input-label">Escolher imagem</label>
+                    </div>
                     <div class="inptText">
                         <input id="name" oninput="ChangeName()" class="inptInpt" type="text" placeholder="Nome">
                     </div>
@@ -61,9 +74,16 @@
             </section>
         </div>
         <h1>Pré Visualizar</h1>
+        <div class="opts">
+            <div class="version">
+                <div onclick="ChangeVersion(0)" id="vrs0" class="vrs active">Free</div>
+                <div onclick="ChangeVersion(1)" id="vrs1" class="vrs">Pro</div>
+                <div onclick="ChangeVersion(2)" id="vrs2" class="vrs">Premium</div>
+            </div>
+        </div>
         <section id="app" class="app">
             <section class="perfil">
-                <div class="img"></div>
+                <div class="img" style="background-image: url();"></div>
                 <h1 class="titleApp">Heloisa Ferreira</h1>
                 <p class="desc">Consultora de imóveis em Lisboa e região</p>
             </section>

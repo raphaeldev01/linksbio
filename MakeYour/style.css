@@ -43,11 +43,11 @@ main {
 }
 
 .sections {
-    display: flex;
-    max-width: 1024px;
+    display: grid;
+    max-width: 80%;
     margin: 30px auto;
     gap: 15px;
-
+    grid-template-columns: 1fr 1fr;
 }
 
 .sec {
@@ -57,6 +57,32 @@ main {
     border-radius: 10px;
     box-shadow: 0px 0px 11px var(--cor1);
     padding: 15px;
+}
+
+.sections .sec:nth-child(1) {
+    grid-column: span 2;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.makeUrl {
+    display: flex;
+    align-items: center;
+    
+}
+
+.inputLink {
+    background: none;
+    outline: none;
+    border: none;
+    /* padding: 10px; */
+    color: #eee;
+    font-size: 16px;
+    width: 150px;
+    overflow: visible;
+    border-bottom: 1px solid #eee;
 }
 
 .name {
@@ -79,6 +105,31 @@ main {
     align-items: center;    
     border: 1px solid var(--cor1);
     transition: all .3s;
+    flex-direction: column;
+}
+
+
+.link .nameInput {
+    display: flex;
+    width: 100%;
+    padding: 20px 10px;
+    align-items: center;    
+    border-bottom: 1px solid var(--cor1);
+    transition: all .3s;
+}
+
+.links .inptUrl{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    /* padding:  10px; */
+    color: #aaa;
+    font-size: 16px;
+    /* text-transform: uppercase; */
+    margin-top: 15px;
+
 }
 
 .inptLink, .inptInpt {
@@ -168,14 +219,61 @@ main {
     height: 40px;
 }
 
+.inptFile {
+    display: none;
+}
+
+.inptFileLabel {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+
 /* ========================================== */
 /*                   APP                      */
 /* ========================================== */
 
+.opts {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 30px auto;
+    
+}
+
+.version {
+    display: flex;
+    border: 1px solid var(--cor1);
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.vrs {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all .3s;
+    color: #ccc;
+}
+
+.vrs.active {
+    background-color: var(--cor1);
+    overflow: hidden;
+    color: #eee;
+    font-weight: bold;
+}
+
 .app {
     min-height: 100vh;
     border: 1px solid var(--cor2);
-    max-width: 1024px;
+    max-width: 80%;
     margin: 30px auto;
     text-align: center;
     padding: 50px 0;
@@ -243,7 +341,7 @@ main {
 
 .footer {
     color: #ccc;
-    font-weight: 100;
+    /* font-weight: 100; */
     font-family: Poppins, sans-serif;
     font-size: 12px;
 }
@@ -251,5 +349,20 @@ main {
 .footer a {
     color: var(--corApp3);
     text-decoration: none;
-    font-weight: 300;
+    font-weight: bold;
+}
+
+.free {
+    position: relative;
+    width: 100%;
+    background-color: #ccc;
+    color: var(--cor3);
+    padding: 15px;
+}
+
+.free a {
+    color: var(--cor2)}
+
+.premium {
+    font-size: 0;
 }
