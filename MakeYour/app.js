@@ -10,7 +10,7 @@ var cores = {
     cor3: "#D9C6B0",
 }
 var version = 0 // 0 = free; 1 = pro; 2 = premium 
-
+var URL = "http://localhost:8800"
 
 
 var ChangeImage = () => {
@@ -183,9 +183,35 @@ var UpdatePreview = () => {
             <footer class="footer ${version == 0 ? "free" : ""} ${version == 2 ? "premium" : ""}">Monte seu proprio <a href="https://wa.me/5516991345301?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20meu%20link%20personalizado%20com%20a%20LinksBio!!!">LinksBio</a> Gratis</footer>`
 }
 
-const HandleFinish = () => {
-    if(!image) return alert("Imagem não encontrada")
-    if(links.length == 0) return alert("Você não pode finalizar sem adicionar Links")
+const HandleFinish = async () => {
+    const url = document.getElementById("url").value
+
+    if(url.length < 5) return alert("está URL naão pode ser utilizada!")
+    if(!image) return alert("Imagem não encontrada");
+    if(links.length == 0) return alert("Você não pode finalizar sem adicionar Links");
+
+    const avaliableSnap = await fetch(URL + "/make/linkavaliable/"+url, {
+        method: "GET",
+    })
+
+    const {avaliable} = await avaliableSnap.json();
+    if (!avaliable) return alert("Está URL ja está em uso!")
+    
+
+    const infos = {
+        image,
+        nome,
+        desc,
+        links,
+        cores,
+        version,
+        link: url
+    }
+
+    // await window.localStorage.setItem("itens", JSON.stringify(infos))
+    // window.location.pathname = "/finish"
+
+
 }
 
 UpdatePreview()
